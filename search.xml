@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fblog%2F2018%2F12%2F14%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[java中replace和replaceAll的区别]]></title>
+    <url>%2Fblog%2F2018%2F12%2F15%2Fjava%E4%B8%ADreplace%E5%92%8CreplaceAll%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[在对字符串做处理的时候，大部分都会用到replace或replaceAll这个俩个api！从字面就可以大概知道是用来做文本替换。而且前者是只替换第一次匹配上的字符，后者则是替换所有匹配上的字符,其实不然！ replace 先看看replace方法在文档中的定义： 1234567891011121314151617181920replacepublic String replace(char oldChar, char newChar)返回一个新的字符串，它是通过用 newChar 替换此字符串中出现的所有 oldChar 得到的。如果 oldChar 在此 String 对象表示的字符序列中没有出现，则返回对此 String 对象的引用。否则，创建一个新的 String 对象，它所表示的字符序列除了所有的 oldChar 都被替换为 newChar 之外，与此 String 对象表示的字符序列相同。示例：&quot;mesquite in your cellar&quot;.replace(&apos;e&apos;, &apos;o&apos;) returns &quot;mosquito in your collar&quot; &quot;the war of baronets&quot;.replace(&apos;r&apos;, &apos;y&apos;) returns &quot;the way of bayonets&quot; &quot;sparring with a purple porpoise&quot;.replace(&apos;p&apos;, &apos;t&apos;) returns &quot;starring with a turtle tortoise&quot; &quot;JonL&quot;.replace(&apos;q&apos;, &apos;x&apos;) returns &quot;JonL&quot; (no change) 参数：oldChar - 原字符。newChar - 新字符。返回：一个从此字符串派生的字符串，它将此字符串中的所有 oldChar 替代为 newChar。 可以从文档示例中看出来replace方法没有只替换第一次匹配上的字符，而是替换了所有匹配上的字符！ replaceAll 接下来看看replaceAll方法在文档中的定义： 1234567891011121314replaceAllpublic String replaceAll(String regex, String replacement)使用给定的 replacement 替换此字符串所有匹配给定的 正则表达式的子字符串。调用此方法的 str.replaceAll(regex, repl) 形式与以下表达式产生的结果完全相同：Pattern.compile( regex ).matcher( str ).replaceAll( repl )注意，在替代字符串中使用反斜杠 (\) 和美元符号 ($) 与将其视为字面值替代字符串所得的结果可能不同；请参阅 Matcher.replaceAll。如有需要，可使用 Matcher.quoteReplacement(java.lang.String) 取消这些字符的特殊含义。参数：regex - 用来匹配此字符串的正则表达式replacement - 用来替换每个匹配项的字符串返回：所得 String 从文档中可以看出replaceAll确实是可以替换所有已匹配上的字符，但是它是用来匹配正则表达式的。 总结区别 replace是替换所有匹上的字符。replaceAll是替换所有匹配上的正则表达式。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>api</tag>
+      </tags>
   </entry>
 </search>
